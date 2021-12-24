@@ -1,0 +1,28 @@
+.border{
+	border: 5px #cccccc solid;
+	width: 50%;
+	background-color: deepskyblue;
+	font-family: Microsoft JhengHei;
+}
+
+.guess{
+	width: 40%;
+}
+
+.play{
+	background-color: sandybrown;
+	width: 20%;
+	display: block;
+}
+
+.play:hover{
+	background-color: #8c4f04;
+    color: #FFF;
+}
+
+.resultBorder{
+	border: 5px #de7a16 solid;
+	width: 30%;
+	font-family: serif;
+	font-weight: bold;
+}

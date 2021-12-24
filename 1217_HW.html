@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel = "stylesheet" type = "text/css" href = "hw.css">
+	<title></title>
+</head>
+<body>
+	<script>
+		var answer = Math.floor(Math.random() * 100 + 1);
+		var ceil = 100;
+		var floor = 0;
+		
+
+		function play(){
+			var guess = parseInt(document.getElementById("Guess").value, 10);
+			var gg = document.getElementById("tbody");
+			var hh = document.getElementById("row");
+			var h=document.createElement("tr");
+
+			if(guess == answer){
+				alert('boom');
+			}else if(guess < answer){
+				floor = guess;				
+			}else if(guess > answer){
+				ceil = guess;	
+			}
+
+			var t=document.createTextNode( floor + "~" + ceil);
+			h.appendChild(t);
+			hh.appendChild(h);
+			gg.appendChild(hh);
+		}
+
+
+	</script>
+
+	<div align="center">
+		<div class = "border">
+			<h1>Guessing game</h1>
+			<p>Your Guess(1~100)</p>
+			<input type = "text" id = "Guess" class = "guess">
+			<br><br>
+			<input type = "button" id = "Play" class = "play" value = "play" onclick = "play()">
+			<br><br>
+
+			<table id = "tab" class = "resultBorder">
+				<thead>
+					<p style="font-weight: bold;">result</p>
+				</thead>
+				<tbody id = "tbody">
+					<tr id = "row"><tr>
+				<tbody>
+			</table>
+
+		</div>
+	</div>
+</body>
+</html>
